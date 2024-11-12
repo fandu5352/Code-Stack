@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background Image Scroll Effect</title>
+</head>
+
+<body>
+    <div class="abhi-bg-image" id="bg-image"></div>
+    <div class="abhi-container">
+        <section id="akmeworld-foundation">
+            <h2>AkmeWorld Foundation</h2>
+            <p>
+                The <strong>AkmeWorld Foundation</strong> is a non-profit organization committed to supporting the AkmeWorld ecosystem and advancing 
+                related technologies for the greater good. With a focus on sustainable development, the Foundation aims to drive positive 
+                impact by addressing key global challenges. The Foundation holds <strong>5% of AWC</strong> (AkmeWorld Coin) and <strong>30% of AkmeWorld DAO profit</strong>, 
+                earmarked for Sustainable Development Goals (SDGs) and initiatives that create long-term, sustainable value.
+            </p>
+        
+            <h3>Purpose and Mission</h3>
+            <p>
+                The AkmeWorld Foundation is dedicated to solving critical issues impacting society and the environment. Through innovative 
+                solutions and strategic partnerships, the Foundation seeks to leverage the power of AkmeWorld’s technology to tackle pressing 
+                global problems and contribute meaningfully to the achievement of the United Nations’ SDGs.
+            </p>
+        
+            <h3>Key Areas of Focus</h3>
+            <p>Some of the primary issues the AkmeWorld Foundation aims to address include:</p>
+            <ul>
+                <li>Climate change mitigation and adaptation</li>
+                <li>Access to clean energy and sustainable energy solutions</li>
+                <li>Water conservation and pollution prevention</li>
+                <li>Educational programs in technology and digital literacy</li>
+                <li>Reducing inequalities and fostering inclusive growth</li>
+                <li>Promoting environmental and social sustainability across industries</li>
+            </ul>
+        
+            <h3>Funding and Support</h3>
+            <p>
+                By allocating a portion of AWC and AkmeWorld DAO profits, the Foundation ensures that resources are consistently available 
+                to fund impactful initiatives. This structure empowers the Foundation to support projects, research, and partnerships 
+                aligned with its mission, creating a cycle of continuous improvement and global benefit.
+            </p>
+        </section>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+
+    .abhi-bg-image {
+        width: 100%;
+        height: 100vh;
+        background: url("https://abhishekyadav28.wordpress.com/wp-content/uploads/2024/10/akmeworld-foundation.jpg");
+        background-position: center;
+        background-attachment: fixed;
+        background-size: 160%;
+    }
+
+    .abhi-container {
+        padding: 100px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        color: grey;
+    }
+
+    @media (max-width: 500px) {
+        .abhi-container {
+            padding: 10px;
+        }
+    }
+</style>
+
+<script>
+
+    const bgImageEl = document.getElementById("bg-image");
+
+    window.addEventListener("scroll", () => {
+        updateImage();
+    });
+
+    function updateImage() {
+        bgImageEl.style.opacity = 1 - window.pageYOffset / 900;
+        bgImageEl.style.backgroundSize = 160 - window.pageYOffset / 12 + "%";
+    }
+</script>
